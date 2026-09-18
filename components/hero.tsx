@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Github, Linkedin, Terminal, Sparkles, Shield, Activity, Cpu, Trophy, Layers } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Github, Linkedin, Terminal, Sparkles, Shield, Activity, Cpu, Quote } from "lucide-react";
 import { KineticReveal } from "./kinetic-text";
 import { PROFILE_INFO } from "@/data/experience";
 import { useSoundFX } from "@/hooks/use-sound-fx";
@@ -143,34 +143,36 @@ export function Hero({ onOpenTerminal }: HeroProps) {
           </div>
         </div>
 
-        {/* Marquee Key Achievements - Cohesive Dual Clay Card Showcase */}
-        <div className="mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 p-5 sm:p-6 clay-card shadow-clay-card">
-          {/* Achievement 1: Public Systems & Models */}
-          <div className="flex items-center gap-4 p-4 rounded-2xl clay-pill shadow-clay-sm text-left">
-            <div className="w-12 h-12 rounded-xl bg-forest-100 flex items-center justify-center text-forest-800 shrink-0 border border-forest-200/70">
-              <Layers className="w-6 h-6" />
+        {/* Engineering Creed & Tech Quote Banner */}
+        <div className="mt-12 lg:mt-16 p-6 sm:p-7 clay-card shadow-clay-card relative overflow-hidden text-left group hover:shadow-clay-card-hover transition-all">
+          {/* Subtle Ambient Background Watermark */}
+          <div className="absolute -right-4 -bottom-6 text-paper-300/40 select-none pointer-events-none font-serif text-8xl font-black">
+            &rdquo;
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-paper-200/80">
+            <div className="flex items-center gap-2 px-3 py-1 rounded-full clay-pill shadow-clay-sm text-xs font-mono font-bold text-forest-800">
+              <Quote className="w-3.5 h-3.5 text-terracotta-600" />
+              <span>CORE ENGINEERING CREED</span>
             </div>
-            <div className="flex flex-col">
-              <span className="font-mono text-2xl sm:text-3xl font-extrabold text-forest-800 leading-tight">
-                8+
-              </span>
-              <span className="text-xs sm:text-sm font-mono text-ink-700 uppercase tracking-wider font-bold">
-                Public Systems & Models
-              </span>
+
+            <div className="flex items-center gap-2 text-[11px] font-mono text-ink-500 font-semibold">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>rsharma@raka-core // prod-ready</span>
             </div>
           </div>
 
-          {/* Achievement 2: Vectors '26 Tech Arena */}
-          <div className="flex items-center gap-4 p-4 rounded-2xl clay-pill shadow-clay-sm text-left">
-            <div className="w-12 h-12 rounded-xl bg-terracotta-100 flex items-center justify-center text-terracotta-700 shrink-0 border border-terracotta-200/70">
-              <Trophy className="w-6 h-6" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-mono text-2xl sm:text-3xl font-extrabold text-terracotta-700 leading-tight">
-                1st Place
+          <div className="pt-5 space-y-3">
+            <p className="text-base sm:text-lg md:text-xl font-sans font-bold text-ink-950 leading-relaxed">
+              &ldquo;Any fool can write code that a computer can understand. Great engineers write systems that <span className="text-terracotta-600 underline decoration-terracotta-400/50 decoration-2 underline-offset-4">don&apos;t wake them up at 3 AM</span>.&rdquo;
+            </p>
+
+            <div className="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs font-mono text-ink-600">
+              <span className="font-semibold text-forest-800">
+                &mdash; Adapted from Martin Fowler &bull; Followed with religious adherence
               </span>
-              <span className="text-xs sm:text-sm font-mono text-ink-700 uppercase tracking-wider font-bold">
-                Vectors '26 Tech Arena
+              <span className="px-2.5 py-0.5 rounded-md clay-pill text-[10px] font-bold text-terracotta-700 uppercase tracking-wider shadow-sm">
+                99.99% Uptime &amp; Deep Sleep
               </span>
             </div>
           </div>
