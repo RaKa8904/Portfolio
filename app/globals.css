@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F7F6F1;
+  --foreground: #161D1A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Eye-Soothing Warm Paper Texture Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ECE8DD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CFC6B2;
+  border-radius: 9999px;
+  border: 2px solid #ECE8DD;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D95C3F;
+}
+
+/* Warm Parchment Selection Color */
+::selection {
+  background: rgba(217, 92, 63, 0.2);
+  color: #7A2715;
+}
+
+/* Claymorphism & Neumorphic Custom Utilities */
+.clay-card {
+  background: #FAF8F5;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    8px 12px 24px rgba(13, 56, 41, 0.05),
+    -6px -6px 18px rgba(255, 255, 255, 0.95),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-card:hover {
+  box-shadow: 
+    12px 18px 32px rgba(13, 56, 41, 0.08),
+    -8px -8px 22px rgba(255, 255, 255, 1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+}
+
+.clay-pill {
+  background: #FAF8F5;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    4px 6px 14px rgba(13, 56, 41, 0.05),
+    -4px -4px 10px rgba(255, 255, 255, 0.9),
+    inset 1px 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.clay-inset {
+  background: #EFECE3;
+  border-radius: 1rem;
+  border: 1px solid rgba(220, 215, 200, 0.5);
+  box-shadow: 
+    inset 3px 3px 6px rgba(13, 56, 41, 0.06),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+}
+
+.clay-btn-primary {
+  background: linear-gradient(135deg, #D95C3F 0%, #C4472C 100%);
+  color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 
+    0 4px 12px rgba(196, 71, 44, 0.28),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-primary:hover {
+  background: linear-gradient(135deg, #E66B4E 0%, #D95C3F 100%);
+  box-shadow: 
+    0 6px 18px rgba(196, 71, 44, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.clay-btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 2px 6px rgba(196, 71, 44, 0.2),
+    inset 0 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.clay-btn-forest {
+  background: linear-gradient(135deg, #134B37 0%, #0D3829 100%);
+  color: #FFFFFF;
+  border-radius: 1rem;
+  box-shadow: 
+    0 4px 12px rgba(13, 56, 41, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clay-btn-forest:hover {
+  background: linear-gradient(135deg, #1A6348 0%, #134B37 100%);
+  box-shadow: 
+    0 6px 18px rgba(13, 56, 41, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Subtle editorial paper ambient glow */
+.editorial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(194, 222, 210, 0.35) 0%, rgba(252, 234, 229, 0.3) 40%, transparent 70%);
+}
+
+/* Perspective Container for 3D Tilt */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
