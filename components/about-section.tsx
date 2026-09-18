@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sparkles, Code2, Brain, Cpu, Lightbulb, Zap, Shield, ArrowRight, GraduationCap, Award, Compass } from "lucide-react";
+import { Sparkles, Code2, Brain, Cpu, Shield, ArrowRight, GraduationCap, Award, Zap } from "lucide-react";
 import { KineticReveal } from "./kinetic-text";
 import { useSoundFX } from "@/hooks/use-sound-fx";
 
@@ -10,11 +10,11 @@ export function AboutSection() {
 
   const interests = [
     { label: "ARTIFICIAL INTELLIGENCE", icon: Brain },
+    { label: "MACHINE LEARNING ENGINEERING", icon: Cpu },
     { label: "LARGE LANGUAGE MODELS", icon: Sparkles },
-    { label: "COMPUTER VISION", icon: Lightbulb },
     { label: "AI PRODUCT DEVELOPMENT", icon: Zap },
-    { label: "STARTUP BUILDING", icon: Compass },
-    { label: "DISTRIBUTED SYSTEMS", icon: Shield },
+    { label: "CYBERSECURITY & FORENSICS", icon: Shield },
+    { label: "DISTRIBUTED SYSTEMS", icon: Code2 },
   ];
 
   return (
@@ -63,20 +63,20 @@ export function AboutSection() {
                 <span className="clay-pill px-2.5 py-0.5 rounded-lg text-forest-900 font-bold font-mono text-xs sm:text-sm border border-forest-200/70 bg-forest-50/80">
                   Bachelor's degree in Artificial Intelligence and Data Science
                 </span>{" "}
-                with a strong focus on machine learning engineering, generative AI, and scalable software systems.
+                with a strong focus on machine learning engineering, product development, and scalable software systems.
               </p>
 
               {/* Bio Paragraph 2 */}
               <p className="text-sm sm:text-base text-ink-800 leading-relaxed font-sans font-medium">
                 I am passionate about building intelligent systems that solve real-world problems. My work spans{" "}
                 <span className="clay-pill px-2.5 py-0.5 rounded-lg text-terracotta-900 font-bold font-mono text-xs sm:text-sm border border-terracotta-200/70 bg-terracotta-50/80">
-                  machine learning
+                  applied machine learning
                 </span>
                 ,{" "}
                 <span className="clay-pill px-2.5 py-0.5 rounded-lg text-amber-900 font-bold font-mono text-xs sm:text-sm border border-amber-200/70 bg-amber-50/80">
-                  generative AI
+                  product engineering
                 </span>
-                , fairness auditing, computer vision, cloud deployment, and full-stack AI applications.
+                , cybersecurity &amp; network forensics, cloud deployment, and full-stack AI applications.
               </p>
             </div>
 
